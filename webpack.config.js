@@ -15,7 +15,7 @@ module.exports = {
         filename: filenames('js'),
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/'
+        publicPath: '/whackcatgame/'
     },
     devServer: {
         port: 4200,
@@ -27,13 +27,22 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html'
+            template: './index.html',
+            favicon: './assets/img/paw.png'
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
-                {from: path.resolve(__dirname, 'assets/img'), to: path.resolve(__dirname, 'dist/img')},
-                {from: path.resolve(__dirname, 'assets/audio'), to: path.resolve(__dirname, 'dist/audio')}
+                {
+                    from: path.resolve(__dirname, 'assets/img'),
+                    to: path.resolve(__dirname, 'dist/img'),
+                    noErrorOnMissing: true
+                },
+                {
+                    from: path.resolve(__dirname, 'assets/audio'),
+                    to: path.resolve(__dirname, 'dist/audio'),
+                    noErrorOnMissing: true
+                }
             ]
         }),
         new MiniCssExtractPlugin({

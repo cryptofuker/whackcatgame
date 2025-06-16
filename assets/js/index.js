@@ -56,11 +56,11 @@ class Timer {
 
 class Assets {
     constructor() {
-        this.menuAudio = new Audio('./audio/menu.mp3');
-        this.gameAudio = new Audio('./audio/game.mp3');
-        this.winAudio = new Audio('./audio/win.mp3');
-        this.loseAudio = new Audio('./audio/lose.mp3');
-        this.catchSound = new Audio('./audio/catch.mp3');
+        this.menuAudio = new Audio('/whackcatgame/audio/menu.mp3');
+        this.gameAudio = new Audio('/whackcatgame/audio/game.mp3');
+        this.winAudio = new Audio('/whackcatgame/audio/win.mp3');
+        this.loseAudio = new Audio('/whackcatgame/audio/lose.mp3');
+        this.catchSound = new Audio('/whackcatgame/audio/catch.mp3');
     }
 }
 
