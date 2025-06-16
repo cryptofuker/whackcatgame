@@ -259,3 +259,14 @@ restartGameBtn.addEventListener('click', restartGame);
 exitButtons.forEach(btn => btn.addEventListener('click', exit));
 
 cats.forEach(cat => cat.addEventListener('click', whack));
+
+window.copyCA = function() {
+    const caInput = document.querySelector('.ca-search');
+    caInput.select();
+    caInput.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    // Optional: show feedback
+    const btn = document.querySelector('.ca-copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = 'Copy'; }, 1200);
+}

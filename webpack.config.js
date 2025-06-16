@@ -13,11 +13,16 @@ module.exports = {
     entry: './assets/js/index.js',
     output: {
         filename: filenames('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
     devServer: {
         port: 4200,
-        hot: isDev
+        hot: isDev,
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        open: true
     },
     plugins: [
         new HTMLWebpackPlugin({
