@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./main.css">
+        <!-- CSS will be injected by webpack -->
         <title>Whack a Cat!</title>
     </head>
     <body>
@@ -61,6 +61,10 @@
 
             <div class="game__footer">
                 <div class="game__level">Level <span class="level"></span></div>
+                <div class="ca-soon-container">
+                    <input type="text" class="ca-search" value="CA COMING SOON" readonly />
+                    <button class="ca-copy-btn" onclick="copyCA()">Copy</button>
+                </div>
                 <button class="btn exit">Exit</button>
             </div>
         </div>
