@@ -14,8 +14,7 @@ module.exports = {
     output: {
         filename: filenames('js'),
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
-        publicPath: '/whackcatgame/'
+        clean: true
     },
     devServer: {
         port: 4200,
